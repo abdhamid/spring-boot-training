@@ -2,6 +2,8 @@ package com.example.demo.controller;
 
 import com.example.demo.dto.ProductDto;
 import com.example.demo.dto.StaffDto;
+import com.example.demo.dto.UpdateCarrotDto;
+import com.example.demo.dto.UpdateStockDto;
 import com.example.demo.entity.ProductEntity;
 import com.example.demo.entity.StaffEntity;
 import com.example.demo.service.StaffService;
@@ -25,6 +27,11 @@ public class StaffController {
     @GetMapping("")
     public List<StaffEntity> getStaffs()  {
         return staffService.fetch();
+    }
+
+    @PutMapping("/carrot")
+    public StaffEntity updateCarrot(@RequestBody UpdateCarrotDto request) {
+        return staffService.updateStock(request);
     }
 
 }
