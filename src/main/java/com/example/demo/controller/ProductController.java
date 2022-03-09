@@ -36,7 +36,6 @@ public class ProductController {
     @PostMapping("")
     public ProductEntity addProduct(@RequestBody ProductDto productDto) {
         return productService.add(productDto);
-//        return new CommonResponse("Successfully add new product");
     }
 
     @PutMapping("/stock")

@@ -11,5 +11,5 @@ public interface ProductRepository extends CrudRepository<ProductEntity, Long> {
 
     List<ProductEntity> findByStockGreaterThan(long stock);
 
-    List<ProductEntity> findByPriceLessThan(long price);
+    List<ProductEntity> findByPriceLessThanEqual(long price);
 }

@@ -51,7 +51,7 @@ public class ProductService {
 
     public List<ProductEntity> fetchAllUnderPrice(Long price){
         //return all in stock
-        return productRepository.findByPriceLessThan(price);
+        return productRepository.findByPriceLessThanEqual(price);
     }
 
 
